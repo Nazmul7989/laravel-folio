@@ -36,8 +36,13 @@
                            <td>{{ $user->name }}</td>
                            <td>{{ $user->email }}</td>
                            <td>
-                               <a href="/users/{{ $user->id }}" class="btn btn-primary btn-sm">Edit</a>
-                               <button class="btn btn-danger btn-sm">Delete</button>
+                               <a href="/users/{{ $user->id }}" class="btn btn-info btn-sm">View</a>
+                               <a href="/users/edit/{{ $user->id }}" class="btn btn-primary btn-sm">Edit</a>
+                               <form action="{{ route('users.destroy', $user->id) }}" method="post" class="d-inline">
+                                   @csrf
+                                   @method('DELETE')
+                                   <button class="btn btn-danger btn-sm" onclick="return confirm('Do you want to delete?')">Delete</button>
+                               </form>
                            </td>
                        </tr>
                    @endforeach

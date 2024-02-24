@@ -2,12 +2,6 @@
 
 @section('content')
 
-    <?php
-
-    $user = \App\Models\User::findOrFail($id);
-
-    ?>
-
     <div class="clearfix mt-3">
         <h3 class="float-start">User details page </h3>
         <a href="/users" class="btn btn-primary btn-sm float-end">Back</a>
