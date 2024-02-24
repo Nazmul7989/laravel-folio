@@ -6,6 +6,10 @@
 
     use function Laravel\Folio\{withTrashed};
     use function Laravel\Folio\{middleware};
+    use function Laravel\Folio\name;
+
+    middleware(['auth']);
+    name('home');
 
     withTrashed();
 //    middleware(['auth']);

@@ -12,7 +12,10 @@
 
     ?>
 
-   <h3>Users page </h3>
+    <div class="clearfix mt-3">
+        <h3 class="float-start">Create User</h3>
+        <a href="/users" class="btn btn-primary btn-sm float-end">Back</a>
+    </div>
     <div class="row">
         <div class="col-12">
             <form action="{{ route('users.store') }}" method="post">
